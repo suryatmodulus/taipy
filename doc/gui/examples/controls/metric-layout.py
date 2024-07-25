@@ -15,28 +15,28 @@
 # -----------------------------------------------------------------------------------------
 from taipy.gui import Gui
 
-# Layout reference can be found in the documentation: https://plotly.com/python/reference/layout/
+if __name__ == "__main__":
+    # Layout reference can be found in the documentation: https://plotly.com/python/reference/layout/
+    value = 50
+    layout = {
+        "width": "1000",
+        "height": "500",
+        "paper_bgcolor": "lightgray",
+        "margin": {
+            "l": 100,
+            "r": 100,
+            "b": 100,
+            "t": 100,
+        },
+        "font": {
+            "size": 20,
+            "color": "black",
+            "family": "Arial",
+        },
+    }
 
-value = 50
-layout = {
-    "width": "1000",
-    "height": "500",
-    "paper_bgcolor": "lightgray",
-    "margin": {
-        "l": 100,
-        "r": 100,
-        "b": 100,
-        "t": 100,
-    },
-    "font": {
-        "size": 20,
-        "color": "black",
-        "family": "Arial",
-    },
-}
-
-page = """
+    page = """
 <|{value}|metric|layout={layout}|>
-"""
+    """
 
-Gui(page).run()
+    Gui(page).run()

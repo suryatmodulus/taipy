@@ -15,23 +15,24 @@
 # -----------------------------------------------------------------------------------------
 from taipy.gui import Gui
 
-# color_map = {
-#     # 0-20 - Let Taipy decide
-#     # 20-40 - red
-#     20: "red",
-#     # 40-60 - Let Taipy decide
-#     40: None,
-#     # 60-80 - blue
-#     60: "blue",
-#     # 80-100 - Let Taipy decide
-#     80: None
-# }
+if __name__ == "__main__":
+    # color_map = {
+    #     # 0-20 - Let Taipy decide
+    #     # 20-40 - red
+    #     20: "red",
+    #     # 40-60 - Let Taipy decide
+    #     40: None,
+    #     # 60-80 - blue
+    #     60: "blue",
+    #     # 80-100 - Let Taipy decide
+    #     80: None
+    # }
 
-value = 50
-color_map = {20: "red", 40: None, 60: "blue", 80: None}
+    value = 50
+    color_map = {20: "red", 40: None, 60: "blue", 80: None}
 
-page = """
+    page = """
 <|{value}|metric|color_map={color_map}|>
-"""
+    """
 
-Gui(page).run()
+    Gui(page).run()
